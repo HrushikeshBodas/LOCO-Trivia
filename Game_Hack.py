@@ -21,6 +21,7 @@ def google_search(search_term, api_key, cse_id, **kwargs):
     res = service.cse().list(q=search_term, cx=cse_id, **kwargs).execute()
     return res['items']
 
+
 def scores_with_options(question,options,**kwargs):
     service = build("customsearch", "v1", developerKey=api_key)
     scores = [0,0,0]
